@@ -14,4 +14,17 @@ main {
 img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+}
+
+.imgcarousel{
+  height: 400px;
+  object-fit: cover;
+}
+
+@media all and (min-width: 992px) {
+  .imgcarousel{
+    height: 500px;
+    object-position: 50% 30%;
+  }
 }

@@ -61,8 +61,56 @@
         </div>
       </nav>
     </header>
+    <!-- carousel -->
+    <section id="bannerPrincipal" class="carousel slide">
+      <div class="carousel-inner imgcarousel">
+        <div class="carousel-item active">
+          <img
+            src="./img/banner/atencion.jpg"
+            class="d-block w-100"
+            alt="atencion"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./img/banner/crypto.jpeg"
+            class="d-block w-100"
+            alt="crypto"
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="./img/banner/dolar.jpg" class="d-block w-100" alt="dolar" />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./img/banner/inversion.jpg"
+            class="d-block w-100"
+            alt="inversion"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#bannerPrincipal"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#bannerPrincipal"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </section>
+
     <!-- empieza en main -->
-    <main class="container bg-body-tertiary">
+    <main class="bg-body-tertiary">
       <section
         class="bg-body-secondary text-center rounded-3 border border-0 my-5"
       >
@@ -140,11 +188,28 @@
           </div>
         </article>
       </section>
-      <!-- modal -->
-      <section class="bg-primary-subtle container-fluid text-center py-4">
-        <h4>Unete a la revolucion de las criptomonedas</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi perspiciatis magnam eveniet, non maiores dignissimos alias assumenda officiis sit, itaque quia dolorum quo consequuntur! Ratione obcaecati expedita unde labore ducimus.</p>
-        <button type="button" class="btn btn-outline-primary">Unete ahora</button>
+
+      <!-- boton para el modal -->
+      <section
+        class="container-fluid bg-primary-subtle text-light bg-opacity-75 py-5 mt-4"
+      >
+        <article class="container text-center">
+          <h2 class="text-center">
+            Únete a la Revolución de las Criptomonedas con CryptoFin
+          </h2>
+          <p class="lead">
+            Regístrate hoy y empieza a invertir en criptomonedas con la
+            plataforma más confiable y segura del mercado.
+          </p>
+          <button
+            class="btn btn-outline-primary"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#modalRegistro"
+          >
+            Crea tu cuenta Ahora
+          </button>
+        </article>
       </section>
 
       <!-- grilla -->
@@ -199,6 +264,24 @@
           </div>
         </article>
       </section>
+
+      <!-- banner final -->
+      <section
+        class="container-fluid bg-primary-subtle text-light bg-opacity-75 py-5 mt-4"
+      >
+        <article class="container text-center">
+          <h2 class="display-6">Cryptofin te esta esperando</h2>
+          <p class="lead">baja la app y crea tu cuenta con tu dni</p>
+          <article class="row justify-content-center py-3 mt-1 gy-4">
+            <div class="col-7 col-md-3">
+              <img src="./img/badge-apple-store.svg" alt="" />
+            </div>
+            <div class="col-7 col-md-3">
+              <img src="./img/google-play-badge-bb.svg" alt="" />
+            </div>
+          </article>
+        </article>
+      </section>
     </main>
 
     <!-- footer -->
@@ -244,6 +327,121 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal de registro -->
+    <section
+      class="modal fade"
+      id="modalRegistro"
+      tabindex="-1"
+      aria-labelledby="modalRegistroLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="modalRegistroLabel">Registro</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- form -->
+          <div class="modal-body">
+            <p>completa el siguente formulario</p>
+            <form>
+              <div class="my-3">
+                <label for="nombreApellido" class="form-label"
+                  >Nombre y Apellido*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombreApellido"
+                  placeholder="ejm: juan perez"
+                  required
+                  minlength="5"
+                  maxlength="20"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email*</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="juan@gmail.com"
+                    required
+                    minlength="5"
+                    maxlength="22"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="contraseña" class="form-label">Contraseña*</label>
+              <input
+                type="password"
+                id="contraseña"
+                class="form-control"
+                aria-describedby="passwordHelpBlock"
+                placeholder="ej: 123A@#21"
+                required
+                maxlength="15"
+                minlength="8"
+              />
+              </div>
+              <div class="mb-3">
+                <label for="contraseña" class="form-label">Repetir contraseña*</label>
+              <input
+                type="password"
+                id="contraseña"
+                class="form-control"
+                aria-describedby="passwordHelpBlock"
+                placeholder="ej: 123A@#21"
+                required
+                maxlength="15"
+                minlength="8"
+              />
+              </div>
+              <div class="mb-3">
+                <label for="direccion" class="form-label">Direccion</label>
+                <input type="text" class="form-control" id="direccion" placeholder="ej: calle, provincio, pais" minlength="5" maxlength="25">
+              </div>
+              <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" id="fecha">
+              </div>
+              <div class="mb-3">
+                <label for="numero" class="form-label">Numero de telefono</label>
+                <input type="number" class="form-control" id="numero" placeholder="ej: +5438144555" maxlength="13">
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="boton">
+                <label class="form-check-label" for="boton">
+                  Acepta los <a href="">terminos y condiciones</a>
+                </label>
+              </div>
+            </div>
+            </form>
+            <p class="display-6 ">los campos con el simbolo * son obligatorios</p>
+            <button class="text-center btn btn-primary " type="submit">Enviar</button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="./js/bootstrap.min.js"></script>
   </body>
 </html>
